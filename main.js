@@ -7,3 +7,14 @@ navItems.forEach((item) => {
     item.classList.add("active");
   });
 });
+
+
+const post = document.querySelector(".post");
+const navItem = post.querySelectorAll("li");
+
+navItem.forEach((item) => {
+  item.addEventListener("click", () => {
+    navItem.forEach((item) => item.classList.remove("active-two"));
+    item.classList.add("active-two");
+  });
+});
